@@ -1,7 +1,8 @@
+// Enables "use cache" directive and Partial Prerendering (PPR) in Next.js 16
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  cacheComponents: true,
 };
 
 export default nextConfig;
