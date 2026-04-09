@@ -1,6 +1,7 @@
 // Landing page: hub on root domain, welcome page on tenant subdomain.
 // The sidebar (in layout) handles doc navigation — this page is the "home" content.
 import { Suspense } from "react";
+import Link from "next/link";
 import { headers } from "next/headers";
 import { getTenant, TENANTS } from "@/lib/tenants";
 import { WelcomeBanner } from "@/app/components/welcome-banner";
@@ -78,13 +79,14 @@ function TenantWelcome({ tenantSlug }: { tenantSlug: string }) {
         to the Getting Started guide.
       </p>
 
-      <a
+      <Link
         href="/docs/getting-started"
+        prefetch={true}
         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium text-white transition-colors"
         style={{ backgroundColor: tenant.primaryColor }}
       >
         Get started →
-      </a>
+      </Link>
 
       <Suspense
         fallback={<p className="text-xs text-gray-300 mt-12 border-t pt-4">Loading timestamp…</p>}

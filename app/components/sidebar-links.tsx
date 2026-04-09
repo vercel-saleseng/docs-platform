@@ -1,6 +1,7 @@
 // Client component that highlights the active doc link in the sidebar.
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { DocEntry } from "@/lib/gitto";
 
@@ -14,8 +15,9 @@ export function SidebarLinks({ docs }: { docs: DocEntry[] }) {
         const isActive = pathname === href;
         return (
           <li key={doc.slug}>
-            <a
+            <Link
               href={href}
+              prefetch={true}
               className={`block px-3 py-2 rounded-md text-sm transition-colors ${
                 isActive
                   ? "bg-gray-100 text-gray-900 font-medium"
@@ -23,7 +25,7 @@ export function SidebarLinks({ docs }: { docs: DocEntry[] }) {
               }`}
             >
               {doc.title}
-            </a>
+            </Link>
           </li>
         );
       })}
