@@ -32,7 +32,10 @@ export type Tenant = {
 };
 
 // The root domain for the deployed app. Change this to your actual domain.
-export const ROOT_DOMAIN = process.env.ROOT_DOMAIN ?? "docs-platform.com";
+export const ROOT_DOMAIN =
+  process.env.ROOT_DOMAIN ??
+  process.env.VERCEL_PROJECT_PRODUCTION_URL ??
+  "docs-platform.com";
 
 export const TENANTS: Record<string, Tenant> = {
   acme: {
