@@ -26,6 +26,7 @@ export async function POST(request: NextRequest) {
   await put(pathname, markdown, {
     access: "public",
     addRandomSuffix: false,
+    allowOverwrite: true,
     contentType: "text/markdown",
   });
 

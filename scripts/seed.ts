@@ -1,9 +1,12 @@
 // Uploads local content/*.md files to Vercel Blob for the Gitto API to serve.
-// Run: npx tsx scripts/seed.ts
-// Requires BLOB_READ_WRITE_TOKEN in env.
+// Run: pnpm seed  (or: npx tsx scripts/seed.ts)
+// Loads .env.local so BLOB_READ_WRITE_TOKEN is set (same as Next.js).
+import { config } from "dotenv";
 import { put, list, del } from "@vercel/blob";
 import { readFileSync, readdirSync } from "fs";
-import { join } from "path";
+import { join, resolve } from "path";
+
+config({ path: resolve(__dirname, "..", ".env.local"), quiet: true });
 
 const CONTENT_DIR = join(__dirname, "..", "content");
 

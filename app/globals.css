@@ -32,3 +32,17 @@ body {
 .prose table { width: 100%; border-collapse: collapse; margin-top: 1rem; margin-bottom: 1rem; }
 .prose th, .prose td { border: 1px solid #e5e7eb; padding: 0.5rem 0.75rem; text-align: left; }
 .prose th { background: #f9fafb; font-weight: 600; }
+
+/* Admin preview pane styles */
+.preview-content { font-size: 0.9rem; line-height: 1.7; color: #374151; }
+.preview-h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; color: #111827; }
+.preview-h2 { font-size: 1.25rem; font-weight: 600; margin-top: 1.75rem; margin-bottom: 0.5rem; color: #111827; }
+.preview-h3 { font-size: 1.05rem; font-weight: 600; margin-top: 1.25rem; margin-bottom: 0.5rem; color: #111827; }
+.preview-p { margin-top: 0.6rem; margin-bottom: 0.6rem; }
+.preview-code { background: #1e293b; color: #e2e8f0; border-radius: 0.5rem; padding: 1rem; margin: 0.75rem 0; overflow-x: auto; font-size: 0.8rem; line-height: 1.6; }
+.preview-code code { font-family: var(--font-mono), monospace; }
+.preview-inline-code { font-family: var(--font-mono), monospace; font-size: 0.825rem; background: #f1f5f9; color: #0f172a; padding: 0.1rem 0.35rem; border-radius: 0.25rem; }
+.preview-link { color: #2563eb; text-decoration: underline; }
+.preview-var { background: #dbeafe; color: #1d4ed8; padding: 0.1rem 0.35rem; border-radius: 0.25rem; font-family: var(--font-mono), monospace; font-size: 0.825rem; }
+.preview-table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.825rem; }
+.preview-td { border: 1px solid #e5e7eb; padding: 0.4rem 0.6rem; }
